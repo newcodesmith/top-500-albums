@@ -3,6 +3,7 @@ let albumCoverList = document.querySelector('.albumCoverList');
 let modalContentCover = document.querySelector('.modal_content_cover');
 let modalAlbumCover = document.querySelector('.modalAlbumCover');
 let artistTitle = document.getElementById('artistTitle');
+let albumYear = document.querySelector('#albumYear');
 let rankNo = document.getElementById('rankNo');
 let trackListing = document.querySelector('#trackListing');
 let releaseUrl = document.querySelector('#releaseUrl')
@@ -45,10 +46,10 @@ Promise.all([
                         .then((response) => {
                             return response.json();
                         }).then((json) => {
+                            const year = json.year
                             const tracks = json.tracklist;
                             const mainReleaseUrl = json.uri;
-                            console.log(mainReleaseUrl);
-
+                            albumYear.textContent = 'Album Year: ' + year;
                             releaseUrl.href = mainReleaseUrl;
 
                             tracks.forEach((track, index) => {
