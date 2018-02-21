@@ -1,0 +1,360 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: freight-text-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#main_logo {
+  padding: 25px;
+  padding-left: 90px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+#header_logo {
+  padding-left: 40px;
+  margin-top: 20px;
+}
+
+#logoContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 70px;
+  margin-bottom: 0px;
+  width: 1200px;
+  height: 130px;
+  border: 2px solid #e6e6e6;
+  background-color: #333;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.39);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header h1 {
+  margin: 10px;
+  color: rgb(155, 89, 216);
+  /* text-decoration: underline; */
+  padding-top: 25px;
+  margin-left: 25px;
+  font-size: 46px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  height: 80px;
+  vertical-align: middle;
+  min-width: 600px;
+  max-width: 900px;
+}
+
+p {
+  font-family: freight-text-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  display: block;
+}
+
+.navLogo {
+  z-index: 60;
+  vertical-align: middle;
+  display: none;
+  padding-right: 40px;
+}
+
+#numberNav {
+  max-height: 50px;
+  overflow: hidden;
+}
+
+#numberNav ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  min-width: 1200px;
+  z-index: 50;
+  text-align: center;
+}
+
+#numberNav li {
+  display: inline;
+  ;
+}
+
+#numberNav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#numberNav li a:hover {
+  background-color: #111;
+}
+
+/* #numberNav li a:active {
+  background-color: rgb(99, 33, 204);
+} */
+
+#numberNav .active {
+  background-color: rgb(99, 33, 204);
+}
+
+#trackListing {
+  height: 70%;
+}
+
+/* ------------------------------------------------------ */
+
+/* Color changing background */
+
+
+.container {
+  background: linear-gradient(225deg, #bd94eb, #b0a3b8, #696969);
+  background-size: 300% 300%;
+  box-sizing: border-box;
+  display: table;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  -webkit-animation: Rainbow 15s ease infinite;
+  -moz-animation: Rainbow 15s ease infinite;
+  animation: Rainbow 15s ease infinite;
+}
+
+@-webkit-keyframes Rainbow {
+  0% {
+    background-position: 94% 0%;
+  }
+  50% {
+    background-position: 7% 100%;
+  }
+  100% {
+    background-position: 94% 0%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two equal columns that sits next to each other */
+
+.column {
+  flex: 50%;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+}
+
+/* Color changing background */
+
+/* ------------------------------------------------------ */
+
+.albumCoverBackground {
+  /* align-items: center; */
+  display: inline-block;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 50px;
+  margin-top: 20px;
+  min-width: 1200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.albumCoverList {
+  padding: 0px;
+}
+
+/* animation */
+
+.albumBucket ol li,
+.albumBucket li img, {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.albumBucket ol li {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 150px;
+  z-index: 0;
+}
+
+h3 {
+  position: relative;
+  float: left;
+  z-index: 1;
+  visibility: hidden;
+}
+
+/* Make sure z-index is higher on hover */
+
+/* Ensure that hover image overlapped the others */
+
+.albumBucket ol li:hover {
+  z-index: 5;
+}
+
+/* Image is position nicely under li */
+
+.albumBucket ol li img,
+h3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.albumBucket ol li img:hover,
+h3:hover {
+  width: 350px;
+  height: 350px;
+  margin-top: -150px;
+  margin-left: -150px;
+  top: 65%;
+  left: 65%;
+  visibility: visible;
+  box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.616);
+}
+
+/*-----------------------------------------------------*/
+
+/*The Modal
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 10;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 1200px;
+  /* Full width */
+  height: 800px;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  justify-content: center;
+}
+
+/* Modal Content */
+
+.modal-content {
+  background-color: rgba(37, 37, 37, 0.966);
+  margin: auto;
+  padding: 20px;
+  border: 4px solid #e6e6e6;
+  width: 80%;
+  /* max-height: 70vh; */
+  box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.616);
+}
+
+.modal_content_cover {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.modalAlbumCover {
+  border: 2px solid #e6e6e6;
+  margin: 10px;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.507);
+}
+
+.infoContainer {
+  margin-right: 0px;
+  display: block;
+  padding: 20px;
+}
+
+.infoContainer h4 {
+  font-size: 24px;
+  margin: 10px;
+  max-width: 400px;
+}
+
+.infoContainer h5 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.infoContainer h4,
+.infoContainer h5,
+#trackListing li {
+  color: #e6e6e6;
+}
+
+#trackListing {
+  max-height: 400px;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.infoContainer h6 {
+  color: #e6e6e6;
+  font-size: 12px;
+  margin: 35px 0px 0px 0px;
+  padding-bottom: 5px;
+}
+
+#discogsLogo {
+  display: inline-block;
+  position: relative;
+  background-color: rgb(83, 32, 167);
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(24, 24, 24, 0.459);
+}
+
+#discogsLogo:hover {
+  background-color: rgb(105, 36, 218);
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*The Modal
+/*-----------------------------------------------------*/

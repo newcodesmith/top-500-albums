@@ -1,0 +1,299 @@
+body {
+  margin: auto;
+  padding: 0;
+  font-family: freight-text-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ------------------------------------------------------ */
+/* Color changing background */
+
+#main {
+  background: linear-gradient(225deg, #bd94eb, #b0a3b8, #696969);
+  background-size: 300% 300%;
+  box-sizing: border-box;
+  display: table;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  -webkit-animation: Rainbow 15s ease infinite;
+  -moz-animation: Rainbow 15s ease infinite;
+  animation: Rainbow 15s ease infinite;
+}
+
+@-webkit-keyframes Rainbow {
+  0% {
+      background-position: 94% 0%;
+  }
+  50% {
+      background-position: 7% 100%;
+  }
+  100% {
+      background-position: 94% 0%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+}
+
+/* Color changing background */
+/* ------------------------------------------------------ */
+
+
+#header_logo {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+#logoContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 0;
+  width: 1200px;
+  height: 130px;
+  border: 2px solid #e6e6e6;
+  background-color: #333;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.171);
+}
+
+#logoContainer h1 {
+  margin: 10px;
+  color: rgb(155, 89, 216);
+  text-decoration: underline;
+  padding-top: 20px;
+  margin-left: 25px;
+  font-size: 46px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  height: 80px;
+  vertical-align: middle;
+  min-width: 600px;
+  max-width: 900px;
+}
+
+.navLogo {
+  z-index: 60;
+  vertical-align: middle;
+  display: none;
+}
+
+#numberNav {
+  height: 50px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+#numberNav ul {
+  display: inline;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  min-width: 1200px;
+  width: 100%;
+  z-index: 50;
+  text-align: center;
+}
+
+#numberNav li {
+  display: inline;
+}
+
+#numberNav li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#numberNav li a:hover {
+  background-color: #111;
+}
+
+#numberNav li a:active {
+  background-color: rgb(99, 33, 204);
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.albumCoverBackground {
+  margin-top: 70px;
+  width: 1200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.albumCoverList {
+  padding: 0;
+}
+
+/* animation */
+
+.albumCoverBackground ol li,
+.albumCoverBackground li img {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.albumCoverBackground ol li {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 150px;
+  z-index: 0;
+}
+
+/* Ensure that hover image overlapped the others */
+
+.albumCoverBackground ol li:hover {
+  z-index: 5;
+}
+
+/* Image is position nicely under li */
+
+.albumCoverBackground ol li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.albumCoverBackground ol li img:hover {
+  width: 350px;
+  height: 350px;
+  margin-top: -150px;
+  margin-left: -150px;
+  top: 65%;
+  left: 65%;
+  visibility: visible;
+  box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.616);
+}
+
+/*-----------------------------------------------------*/
+
+/*The Modal
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 1200px;
+  height: 800px;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: rgba(37, 37, 37, 0.966);
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #e6e6e6;
+  width: 80%;
+  box-shadow: 30px 30px 25px rgba(0, 0, 0, 0.616);
+}
+
+.modal_content_cover {
+  display: flex;
+  flex-direction: row;
+}
+
+.modalAlbumCover {
+  border: 2px solid #e6e6e6;
+  margin: 10px;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.507);
+}
+
+.infoContainer {
+  margin-right: 0;
+  display: block;
+  padding: 20px;
+}
+
+.infoContainer h4 {
+  font-size: 24px;
+  margin: 10px;
+  max-width: 400px;
+}
+
+.infoContainer h5 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.infoContainer h4,
+.infoContainer h5,
+#trackListing li {
+  color: #e6e6e6;
+}
+
+#trackListing {
+  height: 375px;
+  width: 450px;
+  overflow: auto;
+}
+
+.infoContainer h6 {
+  color: #e6e6e6;
+  font-size: 12px;
+  margin: 35px 0 0 0;
+  padding-bottom: 5px;
+}
+
+#discogsLogo {
+  display: inline-block;
+  position: relative;
+  background-color: rgb(83, 32, 167);
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(24, 24, 24, 0.459);
+}
+
+#discogsLogo:hover {
+  background-color: rgb(105, 36, 218);
+}
+
+/* The Close Button on modal*/
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*The Modal
+/*-----------------------------------------------------*/
