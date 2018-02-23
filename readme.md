@@ -18,3 +18,6 @@ For this project, you will build a light application that reads data, has end-to
 ### Submission
 
 Add a link to your code [here](#), and your deployed site [here](#).
+
+https://github.com/newcodesmith/galvanize-frontend-app
+https://top-albums-list.firebaseapp.com/index.html
