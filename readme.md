@@ -1,23 +1,13 @@
-## Galvanize Web App
+#Top 500 Albums
 
-For this project, you will build a light application that reads data, has end-to-end testing, and integrates with an API. The topic is up to you, so pick a project that speaks to your interests.
+##Purpose
+I have always been interested in music. With this project I decided to take the top 500 albums voted by US based Rolling Stone magazine and UK based MNE and show a graphic interface to of their rankings. It is interesting to see how different the two publishers voted.
 
-### Instructions
+##Technologies used
+HTML, CSS, Java-Script, Discogs API
 
-* You should have a brochure page that has information about what your app does and who it's for.
-* Your app should make a GET request to an external API
-* Your app should also pull from a second source of data. This can be another API, another endpoint on the same API, or from a local `.json` file
-* You need to write some data transformation that combines the two objects in a meaningful way
-* The resulting data should be dynamically added to the page
-* You should allow a user to change the API end point. For example, get data about a specific movie, weather for a specific zip code, etc
-* Your app should have end-to-end tests
-* Deploy your app
+##Live Site
+Click [here]( https://top-albums-list.firebaseapp.com/) to enjoy!
 
----
-
-### Submission
-
-Add a link to your code [here](#), and your deployed site [here](#).
-
-https://github.com/newcodesmith/galvanize-frontend-app
-https://top-albums-list.firebaseapp.com/index.html
+##License
+2018 NEWCODESMITH
