@@ -1,0 +1,16 @@
+{
+  "name": "top-500-albums",
+  "version": "1.0.0",
+  "description": "## Purpose I have always been interested in music. With this project I decided to take the top 500 albums voted by US based Rolling Stone magazine and UK based MNE and show a graphic interface to of their rankings. It is interesting to see how different the two publishers voted.",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server '500_top_albums_Project' --files '500_top_albums_Project/**/*' --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}

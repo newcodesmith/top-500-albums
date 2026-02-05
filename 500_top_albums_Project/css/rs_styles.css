@@ -1,7 +1,7 @@
 body {
   margin: auto;
   padding: 0;
-  font-family: freight-text-pro, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: freight-text-pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* ------------------------------------------------------ */
@@ -23,13 +23,13 @@ body {
 
 @-webkit-keyframes Rainbow {
   0% {
-      background-position: 94% 0%;
+    background-position: 94% 0%;
   }
   50% {
-      background-position: 7% 100%;
+    background-position: 7% 100%;
   }
   100% {
-      background-position: 94% 0%;
+    background-position: 94% 0%;
   }
 }
 
@@ -47,37 +47,47 @@ body {
 /* Color changing background */
 /* ------------------------------------------------------ */
 
-
-#header_logo {
-  padding-left: 20px;
-  margin-top: 20px;
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 #logoContainer {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
-  margin-bottom: 0;
-  width: 1200px;
-  height: 130px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px auto 0px auto;
   border: 2px solid #e6e6e6;
   background-color: #333;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.171);
+  padding: 20px;
+}
+
+#header_logo {
+  margin: 0 20px;
+}
+
+#header_logo a {
+  height: 100%;
+  display: flex;
+}
+
+#header_logo img {
+  width: 100%;
+  max-width: 400px;
+  /* min-width: 250px; */
+  margin: auto 0;
 }
 
 #logoContainer h1 {
-  margin: 10px;
+  margin: 0 20px;
   color: rgb(211, 211, 211);
-  text-decoration: underline;
-  padding-top: 20px;
-  margin-left: 25px;
-  font-size: 42px;
-  font-family: 'Playfair Display SC', serif;
-  text-align: left;
-  height: 80px;
-  vertical-align: middle;
-  min-width: 600px;
-  max-width: 750px;
+  font-size: 38px;
+  font-family: "Playfair Display SC", serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .navLogo {
@@ -93,7 +103,9 @@ body {
 }
 
 #numberNav ul {
-  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   margin: auto;
   padding: 0;
@@ -101,21 +113,19 @@ body {
   background-color: #333;
   position: fixed;
   top: 0;
-  min-width: 1200px;
   width: 100%;
   z-index: 50;
   text-align: center;
 }
 
 #numberNav li {
-  display: inline;
+  padding: 14px 16px;
 }
 
 #numberNav li a {
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -128,13 +138,13 @@ body {
 }
 
 .container {
-  width: 1200px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .albumCoverBackground {
   margin-top: 70px;
-  width: 1200px;
+  max-width: 1200px;
 }
 
 li {
@@ -143,6 +153,9 @@ li {
 
 .albumCoverList {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* animation */
@@ -204,7 +217,7 @@ li {
   left: 0;
   top: 0;
   width: 100%;
-  min-width: 1200px;
+  max-width: 1200px;
   height: 800px;
   overflow: auto;
   background-color: rgb(0, 0, 0);
@@ -297,3 +310,34 @@ li {
 
 /*The Modal
 /*-----------------------------------------------------*/
+
+@media screen and (max-width: 1100px) {
+  #logoContainer {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #logoContainer h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  #logoContainer h1 {
+    font-size: 22px;
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  #logoContainer {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #logoContainer {
+    margin-top: 160px;
+  }
+}
