@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/rs_styles.css">
+    <link rel="stylesheet" href="css/albumsPage.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400i" rel="stylesheet">
     <title>Top 500 Albums</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script defer src="js/rs_script.js"></script>
 </head>
 
 <body id='main'>
@@ -57,7 +62,8 @@
     <div class="container">
         <div id="logoContainer">
             <div id="header_logo">
-                <a href="https://www.rollingstone.com/music/lists/500-greatest-albums-of-all-time-20120531" target="_blank">
+                <a href="https://www.rollingstone.com/music/lists/500-greatest-albums-of-all-time-20120531"
+                    target="_blank">
                     <img src="pics/rollingstone_logo.png" alt="RollingStone Logo" class="main_logo">
                 </a>
             </div>
@@ -71,7 +77,7 @@
                 <span class="close">&times;</span>
                 <div class="modal_content_cover">
                     <div class="infoContainer">
-                        <img class="modalAlbumCover" src="" alt="Album Cover" style="width: 400px">
+                        <img class="modalAlbumCover" src="" alt="Album Cover">
                         <h4 id="artistTitle">Artist and Album Name</h4>
                         <h5 id="albumYear">Album Year:</h5>
                         <h5 id="rankNo">Rank No.</h5>
@@ -81,10 +87,11 @@
                         <div id="trackListing">
                         </div>
                         <h6>*For more info about this
-                            <br>album click below</h6>
+                            <br>album click below
+                        </h6>
                         <div>
                             <a id='releaseUrl' href="" target="_blank">
-                                <img src="/pics/discogs_logo_white.png" alt="Discogs Logo" id="discogsLogo" style="width: 90px">
+                                <img src="/pics/discogs_logo_white.png" alt="Discogs Logo" id="discogsLogo">
                             </a>
                         </div>
                     </div>
@@ -95,14 +102,18 @@
 
         <div class="albumCoverBackground">
             <ol class="albumCoverList">
-
+                <div class="loading-container">
+                    <h2 class="loading-text">LOADING</h2>
+                    <div class="loading-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
             </ol>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-    <script defer src="js/rs_script.js"></script>
 </body>
 
 </html>
