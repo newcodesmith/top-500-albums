@@ -43,14 +43,6 @@
   text-decoration: none;
 }
 
-#numberNav li a:hover {
-  background-color: #111;
-}
-
-#numberNav li a:active {
-  background-color: rgb(204, 33, 41);
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -202,6 +194,11 @@ li {
   padding-bottom: 5px;
 }
 
+.infoContainer small {
+  color: white;
+  font-size: 14px;
+}
+
 #discogsLogo {
   display: inline-block;
   position: relative;
@@ -225,6 +222,10 @@ li {
   position: absolute;
   right: 10px;
   top: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
 }
 
 .close:hover,
@@ -234,15 +235,25 @@ li {
   cursor: pointer;
 }
 
+
 /*The Modal
 /*-----------------------------------------------------*/
 
 .loading-container {
   text-align: center;
+  padding: 60px 20px;
 }
 
 .loading-text {
-  color: #333;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .loading-dots {
@@ -295,5 +306,159 @@ li {
 
   .infoContainer {
     width: 100%;
+  }
+}
+
+/* Error Banner Styles */
+.error-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.error-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.error-text {
+  flex: 1;
+}
+
+.error-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: white;
+}
+
+.error-text p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.95;
+  color: white;
+}
+
+.error-retry {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+
+.error-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.error-retry:active {
+  transform: translateY(0);
+}
+
+/* Enhanced Mobile Improvements */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal_content_cover {
+    flex-direction: column;
+  }
+  
+  .infoContainer {
+    width: 100%;
+  }
+  
+  .close {
+    font-size: 40px;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+  
+  #numberNav ul {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  #numberNav li {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .albumCoverBackground ol li {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .albumCoverBackground ol li img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .albumCoverBackground ol li img:hover {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .albumCoverBackground ol li {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .albumCoverBackground ol li img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .albumCoverBackground ol li img:hover {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .error-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .error-icon {
+    font-size: 36px;
+  }
+  
+  #numberNav li {
+    padding: 8px 10px;
+    font-size: 12px;
   }
 }
